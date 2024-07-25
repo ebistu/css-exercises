@@ -94,7 +94,7 @@
   display: grid;
   gap: 4px;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 100px 50px 700px 50px;
+  grid-template-rows: 100px 50px 1fr 50px;
 }
 
 .header {
@@ -111,6 +111,8 @@
 .sidebar {
   grid-row: 2/4;
   grid-column: 1/2;
+  display: grid;
+  gap: 50px;
 }
 
 .nav {
@@ -134,4 +136,24 @@
 
 .nav > ul {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /*grid-template-rows: repeat(3, 200px);*/
+  gap: 15px;
+}
+
+.article .card {
+  height: 200px;
+}
+
+.carp p {
+  padding: 5px;
+}
+
+.side-content, .photo {
+  display: grid;
+  align-items: center;
 }
